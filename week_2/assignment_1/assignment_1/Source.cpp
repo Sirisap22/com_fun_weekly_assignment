@@ -51,10 +51,16 @@ int* number_to_array(int value)
 
 int main()
 {
+	using namespace std;
+	int x, y, z;
+
+	cout << "Please Enter Range to find Largest palindrome product (For The problem answer should use 100 1000) : "; // input 100 1000
+	cin >> y >> x;
 	int max_palindrome = 0;
-	for (int i = 100; i < 1000; i++)
+	z = y;
+	for (int i = y; i < x; i++)
 	{
-		for (int j = 100; j < 1000; j++)
+		for (int j = z; j < x; j++)
 		{
 			int product = i * j;
 			int n = find_digit(product);
@@ -65,7 +71,7 @@ int main()
 			}
 		}
 	}
-	std::cout << max_palindrome;
+	cout << max_palindrome;
 
 	return 0;
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <vector>
 #define ulli unsigned long long int
 
 /*

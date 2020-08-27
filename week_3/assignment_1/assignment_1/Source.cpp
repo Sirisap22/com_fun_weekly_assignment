@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+    quick sort implementation!!!
+*/
+
 void swap(int* a, int* b)
 {
     int temp = *a;

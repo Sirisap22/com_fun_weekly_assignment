@@ -35,6 +35,7 @@ int main() {
 	cout << "Enter n to find sum of all primes below n (For the answer of the question should use 2000000): ";
 	cin >> n;
 	cout << "The Sum of all Primes below " << n<< " is " <<sumAllPrimesBelowN(n); 
+	return 0;
 }
 
 /*

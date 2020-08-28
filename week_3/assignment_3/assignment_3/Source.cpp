@@ -4,6 +4,11 @@
 #define ll long long
 using namespace std;
 
+/*
+    Euler Project Problem 08
+    Largest product in a series
+*/
+
 ll thirteenAdjacentDigitsGreatestProduct(string n) {
     ll max = LLONG_MIN;
     for (ll i = 0; i < n.length(); i++) {

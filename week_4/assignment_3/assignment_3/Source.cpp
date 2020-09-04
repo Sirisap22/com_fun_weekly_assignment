@@ -1,18 +1,16 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 /*
-	reverse array
+    sum all elements in array
 */
 
-void reversed_arr(vector<int> arr) {
-	reverse(arr.begin(), arr.end());
-	cout << endl << "[ ";
-	for (int i = 0; i < arr.size(); i++) {
-		cout << arr[i] << " ";
+int sum(int* arr, int size) {
+	int total = 0;
+	for (int i = 0; i < size; i++) {
+		total += *(arr + i);
 	}
-	cout << "]";
+	return total;
 }
 
 int main() {
@@ -25,7 +23,6 @@ int main() {
 		cout << "Please enter element at index " << i << " : ";
 		cin >> *(arr + i);
 	}
-	vector<int> arr_vec(arr, arr + size);
-	reversed_arr(arr_vec); // 5 4 3 2 1
+	cout <<"The total sum of the elements in the array is : " << sum(arr, size); // ans = 10
 	return 0;
 }

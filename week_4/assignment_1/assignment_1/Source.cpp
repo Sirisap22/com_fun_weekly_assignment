@@ -29,10 +29,14 @@ vector<int> bubble(vector<int> arr) {
 
 
 int main() {
-
+	start:
 	cout << "Please Enter Size of Array : ";
 	int size = 0;
 	cin >> size;
+	if (size < 1 || size > 2e31-1) {
+		cout << "invalid input please try again"<< endl;
+		goto start;
+	}
 	int* arr = new int[size];
 	// test 5 -2 1 7 9
 	for (int i = 0; i < size; i++) {

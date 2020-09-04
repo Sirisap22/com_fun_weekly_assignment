@@ -16,9 +16,14 @@ void reversed_arr(vector<int> arr) {
 }
 
 int main() {
+	start:
 	cout << "Please Enter Size of Array : ";
 	int size = 0;
 	cin >> size; // 5
+	if (size < 1 || size > 2e31 - 1) {
+		cout << "invalid input please try again" << endl;
+		goto start;
+	}
 	int* arr = new int[size];
 	// test 1 2 3 4 5
 	for (int i = 0; i < size; i++) {

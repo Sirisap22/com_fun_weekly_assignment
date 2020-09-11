@@ -6,7 +6,8 @@
 using namespace std;
 
 /*
-	implement radix sort
+	implement radix sort ; input == positive integer3
+
 */
 
 int getDigit(int num, int posi) {
@@ -30,14 +31,14 @@ int mostDigits(vector<int> nums) {
 vector<int> radix(vector<int> arr) {
 	int len = mostDigits(arr);
 	for (int i = 0; i < len; i++) {
-		vector<vector<int>> buckets(10, vector<int>(10));
+		vector<vector<int>> buckets(10, vector<int>(10, -1));
 		for (int j = 0; j < arr.size(); j++) {
 			buckets[getDigit(arr[j], i)].push_back(arr[j]);
 		}
 		arr = {};
 		for (auto a : buckets) {
 			for (auto b : a) {
-				if (b != 0) {
+				if (b != -1) {
 					arr.push_back(b);
 				}
 			}
@@ -68,13 +69,13 @@ start:
 		goto start;
 	}
 	int* arr = new int[size];
-	// test 1 2 3 4 5
+	// test 5 1 3 4 2
 	for (int i = 0; i < size; i++) {
 		cout << "Please enter element at index " << i << " : ";
 		cin >> *(arr + i);
 	}
 	vector<int> arr_vec(arr, arr + size);
 	vector<int> ans =  radix(arr_vec);
-	output(ans);
+	output(ans); // 1 2 3 4 5
     return 0;
 }

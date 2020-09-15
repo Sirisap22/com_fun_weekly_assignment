@@ -3,7 +3,7 @@
 #define matrix vector<vector<int>>
 using namespace std;
 
-/* 2 Dimensions Martrix Addition */
+/* 2 Dimensional Martrix Addition */
 
 matrix new2DMatrix(int rows, int columns) {
 	matrix vec(rows, vector<int>(columns, 0));
@@ -46,17 +46,18 @@ void printMatrix(matrix A) {
 }
 
 int main() {
-	int m, n;
+	int info[2];
+	int* ptr = info;
 	cout << "Please Enter number of rows of a martrix : ";
-	cin >> m;
+	cin >> *(ptr);
 	cout << "Please Enter number of columns of a martrix : ";
-	cin >> n;
+	cin >> *(ptr + 1);;
 	cout << "\n";
 	cout << "--------------1st Matrix-------------" << "\n";
-	matrix A = input2DMatrix(m, n);
+	matrix A = input2DMatrix(info[0], info[1]);
 	cout << "\n";
 	cout << "--------------2nd Matrix-------------" << "\n";
-	matrix B = input2DMatrix(m, n);
+	matrix B = input2DMatrix(info[0], info[1]);
 	matrix C = add(A, B);
 	cout << "\n";
 	cout << "-------------Answer Matrix-----------" << "\n";
